@@ -80,21 +80,29 @@ public class TestCupomFiscal {
 	@Test
 	public void exercicio02_Customizado() {
 		//Defina seus próprios valores para as variáveis a seguir 
-		CupomFiscal.NOME_LOJA = "";
-		CupomFiscal.LOGRADOURO = "";
-		CupomFiscal.NUMERO = 0;
-		CupomFiscal.COMPLEMENTO = "";
-		CupomFiscal.BAIRRO = "";
-		CupomFiscal.MUNICIPIO = "";
-		CupomFiscal.ESTADO = "";
-		CupomFiscal.CEP = "";
-		CupomFiscal.TELEFONE = "";
-		CupomFiscal.OBSERVACAO = "";
-		CupomFiscal.CNPJ = "";
-		CupomFiscal.INSCRICAO_ESTADUAL = "";
+		CupomFiscal.NOME_LOJA = "Smelly Cat";
+		CupomFiscal.LOGRADOURO = "Rua Etheria";
+		CupomFiscal.NUMERO = 205;
+		CupomFiscal.COMPLEMENTO = "Perto da velhinha que mora em uma caverna";
+		CupomFiscal.BAIRRO = "Br. Templo do Cristal";
+		CupomFiscal.MUNICIPIO = "Beach City";
+		CupomFiscal.ESTADO = "BC";
+		CupomFiscal.CEP = "78051-604";
+		CupomFiscal.TELEFONE = "(66)4002-8922";
+		CupomFiscal.OBSERVACAO = "Por Favor ignorar os exército Intergalácticos em guerra tentando dominar o planeta";
+		CupomFiscal.CNPJ = "53.409.609/0001-85";
+		CupomFiscal.INSCRICAO_ESTADUAL = "512.670.302.653";
+
+		String expected = "Smelly Cat"+ BREAK;
+		expected += "Rua Etheria, 205 Perto da velhinha que mora em uma caverna" + BREAK;
+		expected += "Br. Templo do Cristal - Beach City - BC" + BREAK;
+		expected += "CEP:78051-604 Tel (66)4002-8922" + BREAK;
+		expected += "Por Favor ignorar os exército Intergalácticos em guerra tentando dominar o planeta" + BREAK;
+		expected +="CNPJ: 53.409.609/0001-85" + BREAK;
+		expected += "IE: 512.670.302.653";
 		
 		//E atualize o texto esperado abaixo
-		rodarTestarOutput("" + BREAK);
+		rodarTestarOutput(expected + BREAK);
 	}
 
 	private void rodarTestarOutput(String expected) {
